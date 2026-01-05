@@ -1,13 +1,11 @@
 package com.orangehrm.tests;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.orangehrm.base.BaseTest;
+import com.orangehrm.pages.DashBoardPage;
 import com.orangehrm.pages.LoginPage;
-import com.orangehrm.utils.LoggerLoad;
 
 
 
@@ -30,17 +28,12 @@ public class LoginTest extends BaseTest {
 		  log.info("Starting valid login test");
 		  
 		  LoginPage login = new LoginPage(driver);
+		  DashBoardPage dashboard = new DashBoardPage(driver);
 		  
-		  login.enterUsername("Admin");
-		  log.info("Entered username");
+		  login.login("Admin","admin123");
+		  log.info("Logged in successfully");
 		  
-		  login.enterPassword("admin123");
-		  log.info("Entered password");
-		  
-		  login.clickLogin();
-		  log.info("Clicked Login button");
-		  
-		  Assert.assertTrue(login.isDashboardVisible(), "DashBoard is not visible !");
+		  Assert.assertTrue(dashboard.isDashboardHeaderVisible(), "DashBoard is not visible !");
 		  log.info("Valid login test passed");
 				
 	}

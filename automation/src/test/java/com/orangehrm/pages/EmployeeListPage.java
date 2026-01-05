@@ -13,18 +13,21 @@ public class EmployeeListPage extends BasePage {
 	private By employeeNameField = By.xpath("//label[text()='Employee Name']/../following-sibling::div//input");
 	private By searchBtn = By.xpath("//button[@type='submit']");
 	private By employeeTableRows = By.xpath("//div[contains(@class,'orangehrm-container')]/div");
-	//private By employeeTableRows = By.xpath("//div[@role='table']");
+
 	private By deleteIcons = By.xpath("//button[i[contains(@class,'bi-trash')]]");
 	private By confirmDeleteBtn = By.xpath("//button[normalize-space()='Yes, Delete']");
 	private By successToast = By.xpath("//div[@id='oxd-toaster_1']");
+	private By empListHeader = By.xpath("//h5[text() = 'Employee Information']");
+	private By resultEmployeeName = By.xpath("//div[@role='row']//div[@role='cell'][2]");
 	
 	public EmployeeListPage(WebDriver driver) {
 		super(driver);
 	}
 	
 	public void searchEmployee(String employeeName) {
-		waitForVisibility(employeeNameField).sendKeys(employeeName);
-		waitForClickability(searchBtn).click();
+		waitForVisibility(employeeNameField).clear();
+		type(employeeNameField, employeeName);
+		click(searchBtn);
 	}
 	
 	public boolean isEmployeeFound(String employeeName) {
@@ -42,19 +45,25 @@ public class EmployeeListPage extends BasePage {
 		
 		searchEmployee(employeeName);
 		
-		List<WebElement> rows = waitForVisibility(employeeTableRows)
-				.findElements(By.xpath(employeeName));
+		List<WebElement> rows = driver.findElements(employeeTableRows);
 		
 		for(WebElement row :rows) {
 			if (row.getText().contains(employeeName)) {
-				row.findElement(By.xpath("//button[i[contains(@class,'bi-trash')]]")).click();
+				row.findElement(deleteIcons).click();
 				break;
 			}
 		}
-		waitForClickability(confirmDeleteBtn).click();
+		click(confirmDeleteBtn);
 	}
 	
 	public boolean isDeleteSuccess() {
 		return isVisible(successToast);
+	}
+	
+	public boolean isEmployeeListHeaderVisible() {
+		return isVisible(empListHeader);
+	}
+	public String getFirstResultName() {
+		return getText(resultEmployeeName);
 	}
 }

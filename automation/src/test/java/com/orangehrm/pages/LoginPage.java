@@ -1,7 +1,7 @@
 package com.orangehrm.pages;
 import java.time.Duration;
 
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.async.AsyncWaitStrategyFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,12 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.orangehrm.base.BasePage;
-import com.orangehrm.utils.LoggerLoad;
 
 public class LoginPage extends BasePage {
-	private static final Logger log = LoggerLoad.getLogger(LoginPage.class);
-
-	WebDriverWait wait;
+//	private static final Logger log = LoggerLoad.getLogger(LoginPage.class);
+//
+//	WebDriverWait wait;
 	
 	//Locators
 	private By username = By.name("username");
@@ -29,8 +28,7 @@ public class LoginPage extends BasePage {
     }
 	
 	public void enterUsername(String user) {
-		log.info("Entering username : "+  user);
-		driver.findElement(username).sendKeys(user);
+		type((username), user);
 	}
 	
 	public void enterPassword(String pass) {

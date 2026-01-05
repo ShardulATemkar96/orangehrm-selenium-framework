@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.orangehrm.base.DriverFactory;
+import com.orangehrm.factory.DriverFactory;
 
 public class WaitUtils {
 

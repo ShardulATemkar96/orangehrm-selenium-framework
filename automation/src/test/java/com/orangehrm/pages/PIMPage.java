@@ -15,15 +15,15 @@ public class PIMPage extends BasePage{
 	}
 	
 	public void clickPIMMenu() {
-		waitForClickability(pimMenu).click();
+		click(pimMenu);
 	}
 	
 	public void clickAddEmployee() {
-		waitForClickability(addEmployee).click();
+		click(addEmployee);
 	}
 	
 	public void clickEmployeeList() {
-		waitForClickability(employeeList).click();
+		click(employeeList);
 	}
 	
 }

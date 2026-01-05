@@ -1,0 +1,128 @@
+2026-01-02 19:49:27 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-02 19:49:27 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-02 19:49:38 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-02 19:49:41 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-02 19:49:44 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-02 19:49:44 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-02 19:49:47 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-02 19:49:47 INFO  [com.orangehrm.pages.LoginPage] - Entering username : Admin
+2026-01-02 19:49:47 INFO  [com.orangehrm.tests.LoginTest] - Entered username
+2026-01-02 19:49:47 INFO  [com.orangehrm.pages.LoginPage] - Entering passord
+2026-01-02 19:49:47 INFO  [com.orangehrm.tests.LoginTest] - Entered password
+2026-01-02 19:49:47 INFO  [com.orangehrm.pages.LoginPage] - Clicking login button
+2026-01-02 19:49:47 INFO  [com.orangehrm.tests.LoginTest] - Clicked Login button
+2026-01-02 19:49:57 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-02 19:50:05 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-02 19:50:10 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser adn quitting driver
+2026-01-02 20:00:14 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-02 20:00:24 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser adn quitting driver
+2026-01-02 20:33:12 INFO  [com.orangehrm.tests.LoginTest] - Loading config properties...
+2026-01-02 20:33:12 INFO  [com.orangehrm.tests.LoginTest] - Browser selected from config: chrome
+2026-01-02 20:33:42 INFO  [com.orangehrm.tests.LoginTest] - Navigated to URL: https://opensource-demo.orangehrmlive.com/
+2026-01-02 20:49:25 INFO  [com.orangehrm.tests.LoginTest] - Loading config properties...
+2026-01-02 20:49:25 INFO  [com.orangehrm.tests.LoginTest] - Browser selected from config: chrome
+2026-01-02 22:44:29 INFO  [com.orangehrm.tests.LoginTest] - Loading config properties...
+2026-01-02 22:44:29 INFO  [com.orangehrm.tests.LoginTest] - Browser selected from config: chrome
+2026-01-03 19:23:22 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:23:22 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-03 19:23:26 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-03 19:23:28 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-03 19:23:30 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-03 19:23:30 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-03 19:23:32 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-03 19:23:32 INFO  [com.orangehrm.pages.LoginPage] - Entering username : Admin
+2026-01-03 19:23:32 INFO  [com.orangehrm.tests.LoginTest] - Entered username
+2026-01-03 19:23:32 INFO  [com.orangehrm.pages.LoginPage] - Entering passord
+2026-01-03 19:23:33 INFO  [com.orangehrm.tests.LoginTest] - Entered password
+2026-01-03 19:23:33 INFO  [com.orangehrm.pages.LoginPage] - Clicking login button
+2026-01-03 19:23:33 INFO  [com.orangehrm.tests.LoginTest] - Clicked Login button
+2026-01-03 19:23:43 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:23:54 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:23:57 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser adn quitting driver
+2026-01-03 19:46:04 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:46:04 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-03 19:46:08 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:46:18 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:46:18 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-03 19:46:22 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:46:35 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:46:35 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-03 19:46:39 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:46:46 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:46:46 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-03 19:46:58 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:47:16 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:47:16 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-03 19:47:28 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:47:35 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:47:35 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-03 19:47:35 INFO  [com.orangehrm.pages.LoginPage] - Entering username : Admin
+2026-01-03 19:47:36 INFO  [com.orangehrm.tests.LoginTest] - Closing browser adn quitting driver
+2026-01-03 19:47:46 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-03 19:47:50 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser adn quitting driver
+2026-01-04 19:33:19 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:33:24 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:33:24 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-04 19:33:28 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:33:29 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:33:34 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:33:34 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-04 19:33:39 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:33:40 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:33:47 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:33:47 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-04 19:33:50 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:33:52 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:34:03 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:34:03 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-04 19:34:25 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:34:27 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:34:33 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:34:33 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-04 19:34:55 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:34:57 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:35:03 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:35:03 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-04 19:35:04 INFO  [com.orangehrm.tests.LoginTest] - Entered username
+2026-01-04 19:35:04 INFO  [com.orangehrm.pages.LoginPage] - Entering passord
+2026-01-04 19:35:04 INFO  [com.orangehrm.tests.LoginTest] - Entered password
+2026-01-04 19:35:04 INFO  [com.orangehrm.pages.LoginPage] - Clicking login button
+2026-01-04 19:35:04 INFO  [com.orangehrm.tests.LoginTest] - Clicked Login button
+2026-01-04 19:35:16 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 19:35:19 INFO  [com.orangehrm.tests.DashboardTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 19:35:32 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 19:35:36 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser
+2026-01-04 20:07:07 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 20:07:14 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 20:07:14 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-04 20:07:18 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-04 20:07:21 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-04 20:07:23 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-04 20:07:24 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-04 20:07:27 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-04 20:07:27 INFO  [com.orangehrm.tests.LoginTest] - Logged in successfully
+2026-01-04 20:07:30 INFO  [com.orangehrm.tests.LoginTest] - Valid login test passed
+2026-01-04 20:07:30 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-04 20:07:32 INFO  [com.orangehrm.tests.DashboardTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 20:07:39 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 20:07:43 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser
+2026-01-04 20:21:58 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 20:22:06 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 20:22:06 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-04 20:22:10 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-04 20:22:13 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-04 20:22:16 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-04 20:22:16 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-04 20:22:19 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-04 20:22:21 INFO  [com.orangehrm.tests.LoginTest] - Logged in successfully
+2026-01-04 20:22:22 INFO  [com.orangehrm.tests.LoginTest] - Valid login test passed
+2026-01-04 21:15:29 INFO  [com.orangehrm.tests.AddEmployeeTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-04 21:15:35 INFO  [com.orangehrm.tests.AddEmployeeTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-04 21:15:43 INFO  [com.orangehrm.pages.AddEmployeePages] - Adding new employee: Sam Wick
+2026-01-04 21:15:43 INFO  [com.orangehrm.pages.AddEmployeePages] - Entering first name: Sam
+2026-01-04 21:15:44 INFO  [com.orangehrm.pages.AddEmployeePages] - Entering middle name: S
+2026-01-04 21:15:44 INFO  [com.orangehrm.pages.AddEmployeePages] - Entering last name: Wick
+2026-01-04 21:15:44 INFO  [com.orangehrm.pages.AddEmployeePages] - Entering employee ID : 007
+2026-01-04 21:15:45 INFO  [com.orangehrm.pages.AddEmployeePages] - Clicking Save button
+2026-01-04 21:15:45 INFO  [com.orangehrm.pages.AddEmployeePages] - Checking if Personal Details header is visible
+2026-01-04 21:15:51 INFO  [com.orangehrm.tests.AddEmployeeTest] - Add Employee Test passed Sucessfully 

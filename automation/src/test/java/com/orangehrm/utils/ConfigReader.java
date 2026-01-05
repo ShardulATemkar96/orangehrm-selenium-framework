@@ -1,25 +1,30 @@
 package com.orangehrm.utils;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
 	
 	private static Properties prop;
 	
-	public static Properties initProperties() {
+	
+static {
+	try {
 		prop = new Properties();
-		try {
-			FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
-			prop.load(fis);
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
-		return prop;
+		FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
+		prop.load(fis);
+		System.out.println("==== Config Loaded Successfully ====");
+		
+	}catch (Exception e) {
+		System.out.println("==== FAILED To Load Config File ====");
+		e.printStackTrace();
 	}
-	public static String get(String key) {
-		return prop.getProperty(key);
-	}
+}
 
+public static String get(String key) {
+	if(prop== null) {
+		throw new RuntimeException("==== FAILED To Load Config File ====");
+	}
+	return prop.getProperty(key);
+}
 }
