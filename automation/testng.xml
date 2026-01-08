@@ -1,19 +1,31 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="OrangeHRM Suite">
-
-    <listeners>
-    <listener class-name="com.orangehrm.utils.ExtentListeners"/>
+<suite name="OrangeHRM Suite" parallel ="false">
+<listeners>
+    <listener class-name="com.orangehrm.listeners.TestListener"/>
 </listeners>
-
-    <test name="Login Tests">
+  <test name="Smoke Tests">
+	  <groups>
+		  <run>
+		  		<include name="smoke"></include>
+		  </run>
+	  </groups>
+	  <classes>
+	  <class name="com.orangehrm.tests.LoginTest"/>
+	  <class name="com.orangehrm.tests.DashboardTest"/>
+	  </classes>
+  </test>
+  
+  <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         <classes>
-            <class name="com.orangehrm.tests.LoginTest" />
+            <class name="com.orangehrm.tests.LoginTest"/>
+            <class name="com.orangehrm.tests.DashboardTest"/>
+            <class name="com.orangehrm.tests.AddEmployeeTest"/>
+            <class name="com.orangehrm.tests.EmployeeListTest"/>
         </classes>
     </test>
-
-	<test name ="Dashboard Test">
-	<classes>
-	<class name ="com.orangehrm.tests.DashboardTest"/>
-	 </classes>
-	</test>
 </suite>

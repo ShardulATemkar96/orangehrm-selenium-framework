@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
 				{"Admin",""}
 		};
 	}
-	@Test
+	@Test(groups = {"smoke","regression"})
 	public void validLoginTest() {
 		  log.info("Starting valid login test");
 		  
@@ -38,7 +38,7 @@ public class LoginTest extends BaseTest {
 				
 	}
 	
-	@Test(dataProvider = "invalidLoginData")
+	@Test(dataProvider = "invalidLoginData" , groups = {"regression"})
 	public void invalidLoginTest(String username, String password) {
 		
 		log.info("Running invalid login test with: " + username + " / " + password);
@@ -48,11 +48,14 @@ public class LoginTest extends BaseTest {
 		LoginPage login = new LoginPage(driver);
 		login.login(username, password);
 		
-		String error = login.getErrorMessage();
-		
-		Assert.assertNotNull(error, "Error message not shown for invalid login!");
-		Assert.assertTrue(error.equals("Invalid credentials") || error.equals("Required"),
-				"Unexpected error message: " + error);
+		if(username.isEmpty() || password.isEmpty()) {
+			Assert.assertTrue(login.isRequiredFieldErrorVisible(),
+			"Required feild validation message not shown ");
+		}else {
+			String error = login.getErrorMessage();
+			Assert.assertEquals(error,"Invalid credentials",
+					"Invalid credentials message not shown ");
+		}
 		
 
 	}

@@ -2,11 +2,14 @@ package com.orangehrm.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.orangehrm.base.BasePage;
+import com.orangehrm.utils.ElementActions;
 
-public class AddEmployeePages extends BasePage {
+public class AddEmployeePages {
+	
+	private WebDriver driver;
+	private ElementActions actions;
 	
 	private By firstName = By.xpath("//input[@name='firstName']");
 	private By middleName = By.xpath("//input[@name='middleName']");
@@ -16,41 +19,42 @@ public class AddEmployeePages extends BasePage {
 	private By personalDetailsHeader =By.xpath("//h6[text()='Personal Details']");
 	
 	public AddEmployeePages(WebDriver driver) {
-		super(driver);
+		this.driver = driver;
+		this.actions = new ElementActions(driver);
 	}
 	
 	public void enterFirstName(String fname) {
-		log.info("Entering first name: " + fname);
-		type(firstName, fname);
+
+		actions.type(firstName, fname);
 	}
 	
 	public void enterMiddleName(String mname) {
-		log.info("Entering middle name: " + mname);
-		type(middleName, mname);
+
+		actions.type(middleName, mname);
 		}
 	
 	public void enterLastName(String lname) {
-		log.info("Entering last name: " + lname);
-		type(lastName, lname);
+		
+		actions.type(lastName, lname);
 		}
 	
 	public void enterEmpoyeeId(String empId) {
-		log.info("Entering employee ID : " + empId);
-		type(employeeId, empId);
+
+		actions.type(employeeId, empId);
 	}
 	
 	public void clickSave() {
-		log.info("Clicking Save button");
-		click(saveBtn);
+	
+		actions.click(saveBtn);
 	}
 	
 	public boolean isPersonalHeaderVisible() {
-		log.info("Checking if Personal Details header is visible");
-		return isVisible(personalDetailsHeader);
+		
+		return actions.isDisplayed(personalDetailsHeader);
 	}
 	
 	public void addEmployee(String fname, String mname, String lname, String empId) {
-		log.info("Adding new employee: " + fname + " " + lname);
+		
 		enterFirstName(fname);
 		enterMiddleName(mname);
 		enterLastName(lname);

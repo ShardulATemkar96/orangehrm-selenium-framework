@@ -9,7 +9,7 @@ import com.orangehrm.pages.LoginPage;
 
 public class DashboardTest extends BaseTest {
 	
-	@Test
+	@Test(groups = {"smoke", "regression"})
 	public void verifyDashBoardElements() {
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage dashboard = new DashBoardPage(driver);

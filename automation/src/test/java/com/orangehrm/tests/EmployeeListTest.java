@@ -29,7 +29,7 @@ public class EmployeeListTest extends BaseTest {
         dashboard = new DashBoardPage(driver);
 	}
 	
-	@Test
+	@Test(groups = {"regression"})
 	public void searchAndDeleteEmployeeTest() {
 		
 		
@@ -57,7 +57,7 @@ public class EmployeeListTest extends BaseTest {
 		Assert.assertTrue(empList.isDeleteSuccess(), "Delete success toast not visible ");
 		
 		empList.searchEmployee(employeeName);
-		Assert.assertTrue(empList.isEmployeeFound(employeeName),
+		Assert.assertFalse(empList.isEmployeeFound(employeeName),
                 "Employee still appears in list after delete operation.");
 
 		log.info("--Employee List Tets Completed--");

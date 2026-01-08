@@ -6,10 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.orangehrm.base.BasePage;
+import com.orangehrm.utils.ElementActions;
 
-public class EmployeeListPage extends BasePage {
+public class EmployeeListPage  {
 
+	private WebDriver driver;
+	private ElementActions actions;
+	
 	private By employeeNameField = By.xpath("//label[text()='Employee Name']/../following-sibling::div//input");
 	private By searchBtn = By.xpath("//button[@type='submit']");
 	private By employeeTableRows = By.xpath("//div[contains(@class,'orangehrm-container')]/div");
@@ -21,13 +24,14 @@ public class EmployeeListPage extends BasePage {
 	private By resultEmployeeName = By.xpath("//div[@role='row']//div[@role='cell'][2]");
 	
 	public EmployeeListPage(WebDriver driver) {
-		super(driver);
+		this.driver = driver;
+		this.actions = new ElementActions(driver);
 	}
 	
 	public void searchEmployee(String employeeName) {
-		waitForVisibility(employeeNameField).clear();
-		type(employeeNameField, employeeName);
-		click(searchBtn);
+		actions.isDisplayed(employeeNameField);
+		actions.type(employeeNameField, employeeName);
+		actions.click(searchBtn);
 	
 	}
 	
@@ -54,17 +58,17 @@ public class EmployeeListPage extends BasePage {
 				break;
 			}
 		}
-		click(confirmDeleteBtn);
+		actions.click(confirmDeleteBtn);
 	}
 	
 	public boolean isDeleteSuccess() {
-		return isVisible(successToast);
+		return actions.isDisplayed(successToast);
 	}
 	
 	public boolean isEmployeeListHeaderVisible() {
-		return isVisible(empListHeader);
+		return actions.isDisplayed(empListHeader);
 	}
 	public String getFirstResultName() {
-		return getText(resultEmployeeName);
+		return actions.getText(resultEmployeeName);
 	}
 }

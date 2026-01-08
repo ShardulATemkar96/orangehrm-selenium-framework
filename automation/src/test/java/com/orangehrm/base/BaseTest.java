@@ -1,7 +1,5 @@
 package com.orangehrm.base;
 
-import java.util.Properties;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,10 +10,11 @@ import org.testng.annotations.BeforeMethod;
 import com.orangehrm.factory.DriverFactory;
 import com.orangehrm.utils.ConfigReader;
 
+
 public class BaseTest {
 	
 	public WebDriver driver;
-	public Properties prop;
+	
 	protected Logger log = LogManager.getLogger(this.getClass());
 
 	

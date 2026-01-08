@@ -2,32 +2,35 @@ package com.orangehrm.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.orangehrm.base.BasePage;
+import com.orangehrm.utils.ElementActions;
 
-public class DashBoardPage extends BasePage {
+public class DashBoardPage {
 
+	  private WebDriver driver;
+	  private ElementActions actions;
+	  
     private By dashboardHeader = By.xpath("//h6[text()='Dashboard']");
     private By quickLaunchPanel = By.xpath("//p[normalize-space()='Quick Launch'][1]"); // FIXED LOCATOR
     private By pimMenu = By.xpath("//span[text()='PIM']");
     private By employeeListMenu = By.xpath("//a[text()='Employee List']");
 
     public DashBoardPage(WebDriver driver) {
-        super(driver);
+    	 this.driver = driver;
+         this.actions = new ElementActions(driver);
     }
 
     public boolean isDashboardHeaderVisible() {
-    	return isVisible(dashboardHeader);
+    	return actions.isDisplayed(dashboardHeader);
     }
 
     public void goToEmployeeList() {
-    	click(pimMenu);
-    	click(employeeListMenu);
+    	actions.click(pimMenu);
+    	actions.click(employeeListMenu);
     }
     
     public boolean isQuickLaunchPanelVisible() {
-    	return isVisible(quickLaunchPanel);
+    	return actions.isDisplayed(quickLaunchPanel);
     }
 }
 

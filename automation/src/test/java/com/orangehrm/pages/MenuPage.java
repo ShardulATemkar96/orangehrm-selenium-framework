@@ -3,9 +3,11 @@ package com.orangehrm.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.orangehrm.base.BasePage;
+import com.orangehrm.utils.ElementActions;
 
-public class MenuPage extends BasePage {
+public class MenuPage  {
+	 private WebDriver driver;
+	    private ElementActions actions;
 	
 	private By pimMenu = By.xpath("//span[text()='PIM']");
     private By dashboardMenu = By.xpath("//span[text()='Dashboard']");
@@ -19,33 +21,34 @@ public class MenuPage extends BasePage {
     private By addEmployee =By.xpath("//a[normalize-space()='Add Employee']");
     
 	public MenuPage(WebDriver driver) {
-		super(driver);
+		this.driver = driver;
+		this.actions = new ElementActions(driver);
 	}
 
 	public void clickDashboard(){
-		click(dashboardMenu);
+		actions.click(dashboardMenu);
 	}
 	public void clickAdmin(){
-		click(adminMenu);
+		actions.click(adminMenu);
 	}
 	public void clickPIM(){
-		click(pimMenu);
+		actions.click(pimMenu);
 	}
 	public void clickLeave(){
-		click(leaveMenu);
+		actions.click(leaveMenu);
 	}
 	public void clickTime(){
-		click(timeMenu);
+		actions.click(timeMenu);
 	}
 	public void clickRecruitment(){
-		click(recruitmentMenu);
+		actions.click(recruitmentMenu);
 	}
 	
 	//Submenus
 	public void clickEmployeeList(){
-		click(employeeList);
+		actions.click(employeeList);
 	}
 	public void clickAddEmployee(){
-		click(addEmployee);
+		actions.click(addEmployee);
 	}
 }

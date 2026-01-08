@@ -11,7 +11,7 @@ import com.orangehrm.pages.MenuPage;
 
 public class AddEmployeeTest extends BaseTest {
 	
-	@Test
+	@Test(groups = {"regression"})
 	public void addNewEmployeeTest() {
 		LoginPage login = new LoginPage(driver);
 		login.login("Admin","admin123");

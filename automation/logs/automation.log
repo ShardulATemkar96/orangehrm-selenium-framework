@@ -205,3 +205,88 @@
 2026-01-07 19:00:58 INFO  [com.orangehrm.pages.LoginPage] - Performing login with user: Admin
 2026-01-07 19:01:02 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser
 2026-01-07 19:01:02 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:22:16 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:22:20 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:22:20 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:22:25 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:22:25 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-08 13:22:29 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:22:29 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:22:30 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:22:31 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:22:31 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:22:45 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:22:45 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-08 13:22:50 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:22:50 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:22:50 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:22:52 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:22:52 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:22:57 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:22:57 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-08 13:23:01 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:23:01 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:23:01 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:23:03 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:23:03 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:23:07 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:23:07 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-08 13:23:30 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:23:30 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:23:31 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:23:32 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:23:32 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:23:48 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:23:48 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-08 13:24:11 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:24:11 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 13:24:11 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 13:24:13 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 13:24:13 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 13:24:19 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 13:24:19 INFO  [com.orangehrm.tests.LoginTest] - Starting valid login test
+2026-01-08 13:24:20 INFO  [com.orangehrm.tests.LoginTest] - Logged in successfully
+2026-01-08 13:24:23 INFO  [com.orangehrm.tests.LoginTest] - Valid login test passed
+2026-01-08 13:24:23 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 13:24:23 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:21:34 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:21:36 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:21:36 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:21:42 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:21:42 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / admin123
+2026-01-08 14:21:46 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 14:21:46 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:21:47 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:21:50 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:21:50 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:22:04 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:22:04 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / wrongPass
+2026-01-08 14:22:09 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 14:22:09 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:22:09 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:22:11 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:22:11 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:22:16 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:22:16 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: wrongUser / wrongPass
+2026-01-08 14:22:21 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 14:22:21 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:22:21 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:22:24 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:22:24 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:22:26 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:22:26 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with:  / admin
+2026-01-08 14:22:35 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 14:22:35 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:22:36 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:22:38 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:22:38 INFO  [com.orangehrm.tests.LoginTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:22:44 INFO  [com.orangehrm.tests.LoginTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:22:44 INFO  [com.orangehrm.tests.LoginTest] - Running invalid login test with: Admin / 
+2026-01-08 14:22:46 INFO  [com.orangehrm.tests.LoginTest] - Closing browser
+2026-01-08 14:22:46 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
+2026-01-08 14:25:34 INFO  [com.orangehrm.factory.DriverFactory] - Initializing browser: chrome
+2026-01-08 14:25:37 INFO  [com.orangehrm.factory.DriverFactory] - Browser launched successfully
+2026-01-08 14:25:37 INFO  [com.orangehrm.tests.DashboardTest] - Opening URL: https://opensource-demo.orangehrmlive.com/
+2026-01-08 14:25:45 INFO  [com.orangehrm.tests.DashboardTest] - Browser launched and navigated to OrangeHRM login page
+2026-01-08 14:25:53 INFO  [com.orangehrm.tests.DashboardTest] - Closing browser
+2026-01-08 14:25:53 INFO  [com.orangehrm.factory.DriverFactory] - Closing browser
