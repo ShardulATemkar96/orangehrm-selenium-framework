@@ -4,7 +4,22 @@
   <artifactId>automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>automation</name>
-  
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+            <configuration>
+                <groups>${groups}</groups>
+                <suiteXmlFiles>
+                    <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -49,6 +64,23 @@
     <version>6.1.0</version>
 </dependency>
   </dependencies>
-  
+  <profiles>
+
+    <profile>
+        <id>smoke</id>
+        <properties>
+            <groups>smoke</groups>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>regression</id>
+        <properties>
+            <groups>regression</groups>
+        </properties>
+    </profile>
+
+</profiles>
+
   
 </project>

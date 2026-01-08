@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="OrangeHRM Suite" parallel ="false">
+<suite name="OrangeHRM Automation Suite" parallel ="false">
 <listeners>
     <listener class-name="com.orangehrm.listeners.TestListener"/>
 </listeners>
@@ -22,10 +22,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.orangehrm.tests.LoginTest"/>
-            <class name="com.orangehrm.tests.DashboardTest"/>
-            <class name="com.orangehrm.tests.AddEmployeeTest"/>
-            <class name="com.orangehrm.tests.EmployeeListTest"/>
+            <class name="com.orangehrm.tests"/>
         </classes>
     </test>
 </suite>

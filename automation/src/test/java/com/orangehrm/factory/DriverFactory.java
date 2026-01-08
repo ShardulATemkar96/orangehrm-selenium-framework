@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -26,7 +27,15 @@ public class DriverFactory {
         switch (browser.toLowerCase()) {
 
             case "chrome":
-                driver = new ChromeDriver();
+            	ChromeOptions options = new ChromeOptions();
+            	
+            	String headless = ConfigReader.get("headless");
+            	if(headless != null && headless.equalsIgnoreCase("true")) {
+            		log.info("Running Chrome in HEADLESS mode");
+                    options.addArguments("--headless=new");
+                    options.addArguments("--window-size=1920,1080");
+            	}
+                driver = new ChromeDriver(options);
                 break;
 
             case "edge":
