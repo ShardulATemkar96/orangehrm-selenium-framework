@@ -20,6 +20,24 @@
     </plugins>
 </build>
 
+  <profiles>
+
+    <profile>
+        <id>smoke</id>
+        <properties>
+            <groups>smoke</groups>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>regression</id>
+        <properties>
+            <groups>regression</groups>
+        </properties>
+    </profile>
+
+</profiles>
+
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -64,23 +82,7 @@
     <version>6.1.0</version>
 </dependency>
   </dependencies>
-  <profiles>
 
-    <profile>
-        <id>smoke</id>
-        <properties>
-            <groups>smoke</groups>
-        </properties>
-    </profile>
-
-    <profile>
-        <id>regression</id>
-        <properties>
-            <groups>regression</groups>
-        </properties>
-    </profile>
-
-</profiles>
 
   
 </project>

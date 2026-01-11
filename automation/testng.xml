@@ -1,7 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="OrangeHRM Automation Suite" parallel ="false">
 <listeners>
-    <listener class-name="com.orangehrm.listeners.TestListener"/>
+     <listener class-name="com.orangehrm.listeners.RetryTransformer"/>
+    <listener class-name="com.orangehrm.listeners.TestListeners"/>
 </listeners>
   <test name="Smoke Tests">
 	  <groups>
@@ -10,8 +11,7 @@
 		  </run>
 	  </groups>
 	  <classes>
-	  <class name="com.orangehrm.tests.LoginTest"/>
-	  <class name="com.orangehrm.tests.DashboardTest"/>
+	  <class name="com.orangehrm.tests"/>
 	  </classes>
   </test>
   

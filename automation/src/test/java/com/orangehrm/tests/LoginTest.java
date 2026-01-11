@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.orangehrm.base.BaseTest;
 import com.orangehrm.pages.DashBoardPage;
 import com.orangehrm.pages.LoginPage;
+import com.orangehrm.utils.TestDataReader;
 
 
 
@@ -15,13 +16,18 @@ public class LoginTest extends BaseTest {
 	
 	@DataProvider(name = "invalidLoginData")
 	public Object[][] invalidLoginData(){
-		return new Object[][] {
-				{"wrongUser", "admin123"},
-				{"Admin","wrongPass"},
-				{"wrongUser","wrongPass"},
-				{"","admin"},
-				{"Admin",""}
-		};
+		
+		String data = TestDataReader.get("invalid.data");
+		String[] credentials = data.split(",");
+		
+		Object[][] testData = new Object[credentials.length][2];
+		
+		for(int i = 0;i < credentials.length; i++) {
+			String[]userPass =credentials[i].split(":",-1);
+			testData[i][0] = userPass[0];
+			testData[i][1] = userPass[1];
+		}
+		return testData;
 	}
 	@Test(groups = {"smoke","regression"})
 	public void validLoginTest() {
@@ -30,7 +36,10 @@ public class LoginTest extends BaseTest {
 		  LoginPage login = new LoginPage(driver);
 		  DashBoardPage dashboard = new DashBoardPage(driver);
 		  
-		  login.login("Admin","admin123");
+		  login.login(
+				    TestDataReader.get("valid.username"),
+				    TestDataReader.get("valid.password")
+				);
 		  log.info("Logged in successfully");
 		  
 		  Assert.assertTrue(dashboard.isDashboardHeaderVisible(), "DashBoard is not visible !");
