@@ -1,6 +1,7 @@
 package com.orangehrm.flows;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.orangehrm.pages.AddEmployeePages;
 import com.orangehrm.pages.Employee;
@@ -11,16 +12,16 @@ public class EmployeeFlows {
 	
 	private MenuPage menu;
 	private AddEmployeePages addEmployee;
-	private EmployeeListPage empList;
+	private EmployeeListPage employeeList;
 	
 	public EmployeeFlows(WebDriver driver) {
 	
 		this.menu = new MenuPage(driver);
 		this.addEmployee = new AddEmployeePages(driver);
-		this.empList = new EmployeeListPage(driver);
+		this.employeeList = new EmployeeListPage(driver);
 	}
 
-	public void createEmployee(Employee employee) {
+	public boolean createEmployee(Employee employee) {
 		menu.clickPIM();
 		menu.clickAddEmployee();
 		
@@ -30,11 +31,37 @@ public class EmployeeFlows {
 		        employee.lastName(),
 		        employee.employeeId()
 		    );
+		return addEmployee.isPersonalHeaderVisible();
 	}
 	
-	public void deleteEmployee(String firstName) {
+	public boolean onlyCreateEmployee(Employee employee) {
+		menu.clickPIM();
+		menu.clickAddEmployee();
 		
-		
-		empList.deleteEmpoyee(firstName);
+		addEmployee.onlyAddEmployee(
+				employee.firstName(),
+				employee.middleName(),
+				employee.lastName(),
+				employee.employeeId()
+				);
+		return addEmployee.isPersonalHeaderVisible();
+
 	}
+	
+	public boolean isEmployeePresent(Employee employee) {
+		menu.clickPIM();
+		menu.clickEmployeeList();
+		employeeList.searchEmployee(employee.firstName());
+		return 	employeeList.isEmployeeFound(employee.firstName());
+	}
+	
+	public boolean deleteEmployee(Employee employee) {
+		menu.clickPIM();
+		menu.clickEmployeeList();
+		
+		employeeList.searchEmployee(employee.firstName());
+				
+		return employeeList.deleteEmployee(employee.firstName());
+		}
+	
 }

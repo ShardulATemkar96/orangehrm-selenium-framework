@@ -31,10 +31,10 @@ public class BaseTest {
 		log.info("Browser launched and navigated to OrangeHRM login page");
 	}
 	
-	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-		log.info("Closing browser");
-		DriverFactory.quitDriver();
-		}
+//	@AfterMethod(alwaysRun = true)
+//	public void tearDown() {
+//		log.info("Closing browser");
+//		DriverFactory.quitDriver();
+//		}
 	}
 

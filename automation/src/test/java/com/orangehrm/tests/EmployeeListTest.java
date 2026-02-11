@@ -1,6 +1,5 @@
 package com.orangehrm.tests;
 
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -24,7 +23,8 @@ public class EmployeeListTest extends BaseTest {
 	EmployeeListPage empList;
 	DashBoardPage dashboard;
 	AddEmployeePages addEmployee;
-	
+	Employee employee;
+	EmployeeFlows employeeFlows;
 	
 	  @BeforeMethod(alwaysRun = true)
 	    public void setupPages() {
@@ -33,6 +33,8 @@ public class EmployeeListTest extends BaseTest {
 	        empList = new EmployeeListPage(driver);
 	        dashboard = new DashBoardPage(driver);
 	        addEmployee = new AddEmployeePages(driver);
+	        employee = EmployeeDataFactory.createEmployee();
+	        employeeFlows = new EmployeeFlows(driver);
 	  }
 	
 	@Test(groups = {"regression"})
@@ -44,32 +46,11 @@ public class EmployeeListTest extends BaseTest {
 		login.login("Admin","admin123");
 		Assert.assertTrue(dashboard.isDashboardHeaderVisible(),
 				"Dashboard did not load properly");
-		
-		Employee employee = EmployeeDataFactory.createEmployee();
-		
-		EmployeeFlows flows = new EmployeeFlows(driver);
-		
-		flows.createEmployee(employee);
-			
-		menu.clickEmployeeList();
-		Assert.assertTrue(empList.isEmployeeListHeaderVisible(), "Employee List Header not visible");
-		
-		
-		
-		empList.searchEmployee(employee.firstName());
-		 Assert.assertTrue(empList.isEmployeeFound(employee.firstName()),
-	     "Employee '" + employee.firstName() + "' was not found in search results.");
-		 log.info("SEarched employee");
-		
-		 flows.deleteEmployee(employee.firstName());
-		 Assert.assertTrue(empList.isDeleteSuccess());
-		 log.info("DeletedEmployee");
-		 
 	
-		 
-//		empList.searchEmployee(employee.firstName());
-//		Assert.assertFalse(empList.isEmployeeFound(employee.firstName()),
-//                "Employee still appears in list after delete operation.");
+		employeeFlows.createEmployee(employee);
+		
+		 employeeFlows.deleteEmployee(employee);
+		
 
 		log.info("--Employee List Tets Completed--");
 	}

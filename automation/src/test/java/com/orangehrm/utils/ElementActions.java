@@ -64,6 +64,9 @@ public class ElementActions {
 	public void scrollToElement(WebElement element) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
+	public void scrollToElement(By locator) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", locator);
+	}
 
 
 	public void jsClick(WebElement element) {
